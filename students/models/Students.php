@@ -57,7 +57,7 @@ class Students extends Connection
 
     public function update($id, $name, $lastname, $identification, $email, $subject, $teacher, $average, $registration_date)
     {
-        $stmt = $this->db->prepare("UPDATE `users` SET name=:name, lastname=:lastname, identification=:identification,email=:email, subject=:subject, teacher=:teacher, average=:average, registration_date=:registration_date WHERE id_user =:id");
+        $stmt = $this->db->prepare("UPDATE `students` SET name=:name, lastname=:lastname, identification=:identification,email=:email, subject=:subject, teacher=:teacher, average=:average, registration_date=:registration_date WHERE id_student =:id");
 
         $stmt->bindParam('name', $name, PDO::PARAM_STR);
         $stmt->bindParam('lastname', $lastname, PDO::PARAM_STR);

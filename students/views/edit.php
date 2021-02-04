@@ -55,8 +55,8 @@ $modelMethod = new Methods();
                     <div class="form-group">
                         <label for="subject">Subject</label>
                         <select class="form-control" name="subject" id="subject" required>
-                            <option value="" <?php echo $student['subject'] ?>"><?php echo $student['subject'] ?></option>
-                            <      <?php
+                            <option value="" <?php echo $student['subject'] ?>" selected><?php echo $student['subject'] ?></option>
+                                <?php
                             $subjects = $modelMethod->getSubjects();
                             if ($subjects) {
 
@@ -72,7 +72,7 @@ $modelMethod = new Methods();
                     <div class="form-group">
                         <label for="teacher">Teacher:</label>
                         <select class="form-control" name="teacher" id="teacher" required>
-                            <option>Select</option>
+                            <option selected value="<?php echo $student['teacher'] ?>"><?php echo $student['teacher'] ?></option>
                             <?php
                             $teachers = $modelMethod->getTeachers();
                             if ($teachers) {
