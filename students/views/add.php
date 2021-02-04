@@ -1,3 +1,14 @@
+<?php
+require_once('../../users/models/Users.php');
+require_once('../../methods.php');
+
+$userModel = new Users();
+$userModel->validateSession();
+
+$method = new Methods();
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -37,22 +48,32 @@
                 <label for="subject">Subject</label>
                 <select class="form-control" name="subject" id="subject" required>
                     <option>Select</option>
-                    <option value="math">Math</option>
-                    <option value="english">English</option>
-                    <option value="spanish">Spanish</option>
-                    <option value="science">Science</option>
+                    <?php
+                    $subjects = $method->getSubjects();
+                    if ($subjects) {
+                        foreach ($subjects as $subject) { ?>
+                            <option value="<?php echo $subject['subject'] ?>"><?php echo $subject['subject'] ?></option>
+
+                    <?php   }
+                    }
+
+                    ?>
                 </select>
             </div>
 
 
             <div class="form-group">
                 <label for="teacher">Teacher:</label>
-                <select class="form-control" name="teacher" id="teacher" required> 
+                <select class="form-control" name="teacher" id="teacher" required>
                     <option>Select</option>
-                    <option value="santiago">Santiago Guerrero</option>
-                    <option value="ana">Ana Martinez</option>
-                    <option value="daniel">Daniel Clark</option>
-                    <option value="claudia">Claudia Pulgarin</option>
+                    <?php
+                    $teachers = $method->getTeachers();
+                    if ($teachers) {
+                        foreach ($teachers as $teacher) {
+                    ?>
+                            <option value="<?php echo $teacher['name']. ' ' . $teacher['lastname']; ?>"><?php echo $teacher['name']. ' ' . $teacher['lastname']; ?></option>
+                    <?php }
+                    } ?>
                 </select>
             </div>
             <div class="form-group">

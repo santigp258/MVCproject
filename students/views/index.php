@@ -52,7 +52,7 @@ $students = $studentModel->get();
                             <td><?php echo $student['email']; ?> </td>
                             <td><?php echo $student['subject']; ?> </td>
                             <td><?php echo $student['teacher']; ?> </td>
-                            <td><?php echo $student['average']; ?> </td>
+                            <td><?php echo $student['average']; ?>% </td>
                             <td><?php echo $student['registration_date']; ?> </td>
                             <td>
                                 <a href="edit.php"><i class="far fa-edit"></i></a>
