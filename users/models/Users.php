@@ -10,8 +10,6 @@ class Users extends Connection
 
     public function login($user, $password)
     {
-        $row = null;
-
         $stmt = $this->db->prepare('SELECT * FROM users WHERE user=:user AND password=:password');
         $stmt->bindparam('user', $user, PDO::PARAM_STR);
         $stmt->bindparam('password', $password, PDO::PARAM_STR);
@@ -44,14 +42,14 @@ class Users extends Connection
 
     public function validateSession()
     {
-        if ($_SESSION['id'] === null) {
+        if (!$_SESSION['id']) {
             header('Location: ../../index.php');
         }
     }
 
     public function validateAdministratorSession()
     {
-        if ($_SESSION['id'] !== null) {
+        if ($_SESSION['id']) {
             if ($_SESSION['profile'] == 'teacher') {
                 header('Location: ../../students/views/index.php');
             } else {

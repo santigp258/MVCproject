@@ -16,7 +16,7 @@
                 <a class="btn btn-primary" href="add.php" target="_blank" role="button">Add Administrator <i class="fas fa-plus-circle"></i></a>
             </p>
         </div>
-
+        <div class="table-responsive">
         <table class="table table-dark table-striped">
             <tr>
                 <th>Id</th>
@@ -40,6 +40,7 @@
                 </td>
             </tr>
         </table>
+        </div>
     </div>
 </body>
 
