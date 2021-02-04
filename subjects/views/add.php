@@ -17,6 +17,7 @@ $usersModel->validateSession();
 <?php include_once('../../includes/cdn.php') ?>
 
 <body>
+<?php include_once('../../includes/nav.php') ?>
     <div class="container">
         <div class="jumbotron">
             <h1 class="display-4">Add Subject</h1>
