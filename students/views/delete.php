@@ -1,7 +1,6 @@
 <?php
 require_once('../models/Students.php');
 require_once('../../users/models/Users.php');
-require_once('../../methods.php');
 
 
 $userModel = new Users();

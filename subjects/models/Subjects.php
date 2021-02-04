@@ -49,7 +49,7 @@ class Subjects extends Connection
 
     public function update($id, $subject)
     {
-        $stmt = $this->db->prepare("UPDATE `users` SET subject=:subject id_subject =:id");
+        $stmt = $this->db->prepare("UPDATE `subjects` SET subject=:subject WHERE id_subject =:id");
 
         $stmt->bindParam('subject', $subject, PDO::PARAM_STR);
         $stmt->bindParam('id', $id, PDO::PARAM_INT);

@@ -1,3 +1,16 @@
+<?php
+require_once('../models/Subjects.php');
+require_once('../../users/models/Users.php');
+
+
+$userModel = new Users();
+$userModel->validateSession();
+
+$studentModel = new Subjects();
+$id = $_GET['id'];
+
+$studentInformation = $studentModel->getById($id);
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -14,9 +27,9 @@
             <h1 class="display-4">Delete Subject</h1>
         </div>
         <form method="POST" action="../controllers/DeleteController.php">
-        <input type="hidden" name="id" value="">
-        <p>Are you sure delete this subject?</p>
-        <input type="submit" class="btn btn-warning" value="Delete">
+            <input type="hidden" name="id" value="<?php echo $id ?>">
+            <p>Are you sure delete <strong><?php echo strtoupper($studentInformation[0]['subject']); ?></strong>?</p>
+            <input type="submit" class="btn btn-warning" value="Delete">
         </form>
     </div>
 </body>
