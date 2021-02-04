@@ -1,5 +1,10 @@
 <?php
 require_once('../models/Teachers.php');
+require_once('../../users/models/Users.php');
+
+$usersModel = new Users();
+$usersModel->validateSession();
+
 $id = $_GET['id'];
 
 $teachersModel = new Teachers();
