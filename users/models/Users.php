@@ -52,9 +52,16 @@ class Users extends Connection
         if ($_SESSION['id']) {
             if ($_SESSION['profile'] == 'teacher') {
                 header('Location: ../../students/views/index.php');
-            } else {
-                header('Location: ../../index.php');
-            }
+            } 
+        }else {
+            header('Location: ../../index.php');
         }
+    }
+    public function logout(){
+        $_SESSION['id'] = null;
+        $_SESSION['name'] = null;
+        $_SESSION['profile'] = null;
+        session_destroy();
+        header('Location: ../../index.php');
     }
 }

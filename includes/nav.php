@@ -1,6 +1,7 @@
 <?php
 $baseUrl = 'http://localhost/mvc';
-
+$userModel = new Users();
+$info = $userModel->getName();
 ?>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
@@ -25,8 +26,15 @@ $baseUrl = 'http://localhost/mvc';
                 </li>
             </ul>
         </div>
-            <div class="navbar-nav">
-                <a class="nav-link active navbar-brand ml-auto" href="<?php echo $baseUrl ?>">Logout <span class="sr-only">(current)</span></a>
-            </div>
+        <ul class="navbar-nav">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <?php echo $info?>
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <a class="dropdown-item" href="<?php echo $baseUrl ?>/users/controllers/logoutController.php">Logout</a>
+                </div>
+            </li>
+        </ul>
     </div>
 </nav>

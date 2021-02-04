@@ -3,7 +3,7 @@ require_once('../models/Administrators.php');
 require_once('../../users/models/Users.php');
 
 $usersModel = new Users();
-$usersModel->validateSession();
+$usersModel->validateAdministratorSession();
 
 
 $administratorModel = new Administrator();
