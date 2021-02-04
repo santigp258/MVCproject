@@ -55,8 +55,8 @@ $students = $studentModel->get();
                             <td><?php echo $student['average']; ?>% </td>
                             <td><?php echo $student['registration_date']; ?> </td>
                             <td>
-                                <a href="edit.php"><i class="far fa-edit"></i></a>
-                                <a href="delete.php"><i class="far fa-trash-alt"></i></a>
+                                <a href="edit.php?id=<?php echo $student['id_student'] ?>"><i class="far fa-edit"></i></a>
+                                <a href="delete.php?id=<?php echo $student['id_student'] ?>"><i class="far fa-trash-alt"></i></a>
                             </td>
                         </tr>
                 <?php  }
