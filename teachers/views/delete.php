@@ -18,7 +18,7 @@ $teachersInformation = $teachersModel->getById($id);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Delete Teacher</title>
+    <title>Grading System -Delete Teacher</title>
 </head>
 <?php include_once('../../includes/cdn.php') ?>
 

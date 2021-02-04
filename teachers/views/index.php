@@ -16,7 +16,7 @@ $teachersModel = new Teachers();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Notes System - Teachers</title>
+    <title>Grading System - Teachers</title>
 </head>
 <?php include_once('../../includes/cdn.php') ?>
 

@@ -15,7 +15,7 @@ $administratorModel = new Administrator();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Notes System - Administrators</title>
+    <title>Grading System- Administrators</title>
 </head>
 <?php include_once('../../includes/cdn.php') ?>
 

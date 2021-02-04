@@ -17,7 +17,7 @@ $studentInformation = $studentModel->getById($id);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Delete Subject</title>
+    <title>Grading System - Delete Subject</title>
 </head>
 <?php include_once('../../includes/cdn.php') ?>
 
