@@ -10,4 +10,4 @@ if($_POST){
     header('Location: ../../index.php');
 }
 
-?><pre><?php var_dump($_POST) ?></pre>
+?>
