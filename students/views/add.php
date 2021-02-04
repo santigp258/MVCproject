@@ -42,7 +42,7 @@ $method = new Methods();
 
             <div class="form-group">
                 <label for="email">Email:</label>
-                <input type="email" class="form-control" id="email" placeholder="Enter email" required>
+                <input type="email" class="form-control" id="email" name="email" placeholder="Enter email" required>
             </div>
             <div class="form-group">
                 <label for="subject">Subject</label>
@@ -78,7 +78,7 @@ $method = new Methods();
             </div>
             <div class="form-group">
                 <label for="average">Average:</label>
-                <input type="text" class="form-control" id="average" placeholder="Enter Average" required>
+                <input type="text" class="form-control" id="average" name="average" placeholder="Enter Average" required>
             </div>
             <button type="submit" class="btn btn-primary mt-4">Submit</button>
         </form>
